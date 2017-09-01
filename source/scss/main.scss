@@ -57,5 +57,41 @@ header{
       font-size: 14px;
     }
   }
+}
+
+
+main{
+  @include flex(column, center, center);
+  max-width: $max-width;
+  width: 100%;
+  border: 1px solid black;
+
+  form{
+    @include flex(row, center, center);
+    width: 100%;
+    
+    .btn{
+      margin-left: 25px;
+    }
+  }
+
+  .list-group{
+    width: 100%;
+    //max-width: $max-width;
+  }
+
 
 }
+
+footer{
+  @include flex(row, center, center);
+  border: 1px solid black;
+  height: 200px;
+  width: 100%;
+
+  .list-group{
+    width: auto;
+    //max-width: $max-width;
+  }
+}
+
