@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Тестове завдання</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
   <% if(NODE_ENV==='development') { %>
     <link rel="stylesheet" href="styles.css">
   <% } %>
@@ -14,111 +14,60 @@
 
 <body>
   <header>
-      <nav class="navbar navbar-expand-lg ">
-          <a class="navbar-brand" href="#">ulance</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">Консультация</a>
-              <a class="nav-item nav-link" href="#">Услуги</a>
-              <a class="nav-item nav-link" href="#">Юристы</a>
-              <a class="nav-item nav-link" href="#">Как это работает</a>
-            </div>
-          </div> -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-item nav-link active" href="#">Консультация</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-item nav-link" href="#">Услуги</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-item nav-link" href="#">Юристы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item nav-link" href="#">Как это работает</a>
-                </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-        </nav>
+    <nav class="menu">
+      <a href="">ulance</a>
+      <a href="#">Консультация</a>
+      <a href="#">Услуги</a>
+      <a href="#">Юристы</a>
+      <a href="#">Как это работает</a>
+      <div class="input-group">
+          <!-- <button class="icon-search"></button>
+          <button class="icon-open"></button> -->
+          <input type="text" placeholder="Поиск клиентов">
+      </div>
+      <button class="icon-login"></button>
+    </nav>
   </header>
 
-  <main>
-    <form action="">
-      <div class="input-group">
-          <input type="text" class="form-control" aria-label="Text input with dropdown button">
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Категория
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <button type="button" class="btn btn-primary">Primary</button>
-    </form>
 
-
-
-  <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">List group item heading</h5>
-        </div>
-        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-        <small class="text-muted">Donec id elit non mi porta.</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small class="text-muted">Donec id elit non mi porta.</small>
-        </a>
-    </div>
-
-
-
-
-
-  <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">4</a></li>
-        <li class="page-item"><a class="page-link" href="#">5</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </main>
 
   <footer>
+    <div class="footer-content">
+      <ul>
+          <li><a href="#"><h5>О сайте</h5></a></li>      
+           <li><a href="#">Правила</a></li>
+           <li><a href="#">Помощь</a></li>
+           <li><a href="#">Контакты</a></li>
+      </ul>
+      <ul>
+        <li><a href="#"><h5>Войти</h5></a></li>      
+        <li><a href="#">Зарегистрироваться</a></li>
+        <li><a href="#">Востановить доступ</a></li>
+        <li><a href="#">Рекомендации Исполнителям</a></li>
+        <li><a href="#">Рекомендации заказчикам</a></li>
+     </ul>
+     <ul>
+        <li><a href="#"><h5>Опубликовать роботу</h5></a></li>      
+        <li><a href="#">Консультации</a></li>
+        <li><a href="#">Поиск по сайту</a></li>
+        <li><a href="#">Реклама на сайте</a></li>
+      </ul>
 
+    <div class="social-links">
+      <span>
+        <a href="/" id="twitter"></a>
+        <a href="/" id="facebook"></a>
+        <a href="/" id="google"></a>
+      </span>
+      <span>
+        <a href="" id="linkedin"></a>
+        <a href="" id="vk"></a>
+        <a href="" id="odnoklasniki"></a>
+      </span>
+    </div>
+    </div>
+
+    <h5 class="copyriting">Ulance.com.ua<span>&nbsp;&#169;&nbsp;</span>2014</h5></div>
   </footer>
 </body>
 
