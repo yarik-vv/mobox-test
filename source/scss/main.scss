@@ -12,6 +12,10 @@ a {
   }
 }
 
+ul{
+  list-style-type: none;
+}
+
 // svg {
 //   fill: white;
 // }
@@ -444,12 +448,44 @@ main{
 }
 
 //}
-#pagination{
+#pagination {
+  @include flex(row, space-between, center);
   align-self: center;
   margin: 30px 0 30px 0;
-  width: 200px;
-  height: 30px;
-  border: 1px solid black;
+  //width: 200px;
+  //height: 30px;
+  border: 1px solid $gray-border;
+  border-radius: 3px;
+
+  li{
+    @include flex(row, center, center);
+    height: 43px;
+    width: 43px;
+    border: 0;
+    //background: #4a89e4;
+    background: white;
+    color: #4a89e4;
+    border-right: 1px solid $gray-border;
+
+    &:last-child{
+      border: none;
+    }
+
+    &:hover{
+      cursor: pointer;
+      background: $gray-border;
+      color: white;
+    }
+  }
+
+  .active{
+    background: #4a89e4;
+    color: white;
+
+    &:hover{
+      background: #4a89e4;
+    }
+  }
 }
 ///////////////-------------foooter-----------------------
 footer{
