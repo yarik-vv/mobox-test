@@ -6,7 +6,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Тестове завдання</title>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> -->
   <% if(NODE_ENV==='development') { %>
     <link rel="stylesheet" href="styles.css">
   <% } %>
@@ -14,15 +13,15 @@
 
 <body>
   <header>
-    <nav class="menu">
+    <nav class="menu" id="kek">
       <a href="">ulance</a>
       <a href="#">Консультация</a>
       <a href="#">Услуги</a>
       <a href="#">Юристы</a>
       <a href="#">Как это работает</a>
-      <div class="input-group">
-          <!-- <button class="icon-search"></button>
-          <button class="icon-open"></button> -->
+      <div class="input-menu">
+          <button class="icon-search"></button>
+          <button class="icon-open"></button>
           <input type="text" placeholder="Поиск клиентов">
       </div>
       <button class="icon-login"></button>
@@ -36,7 +35,7 @@
     <div class="main-input">  
       <span class="icon-search"></span>
       <input type="text" placeholder="Текст">
-      <button class="icon-category">&nbsp;Категория</button>
+      <button class="icon-category">&nbsp;&nbsp;Категория</button>
     </div>
     <button class="main-search-btn icon-search"></button>
     <button class="main-search-btn icon-help"></button>
@@ -45,72 +44,71 @@
   <div class="dropdown">
     <div class="kategory">
         <ul class="nav">
-          <li><a href="#">Корпоративное право</a></li>
-          <li><a href="#">Медицинское право</a></li>
-          <li><a href="#">Право Интелектуально собственности</a></li>
-          <li><a href="#">Уголовное право</a></li>
+          <li class="budget city">Корпоративное право</li>
+          <li class="rate reviews city">Медицинское право</li>
+          <li class="budget term date">Право Интелектуально собственности</li>
+          <li class="city">Уголовное право</li>
         </ul>
         <ul class="nav">
-          <li><a href="#">Автомобильное право</a></li>
-          <li><a href="#">Семейное право</a></li>
-          <li><a href="#">Земельное право</a></li>
-          <li><a href="#">Общеобразовательное право</a></li>
+          <li class="date term city">Автомобильное право</li>
+          <li class="city reviews date">Семейное право</li>
+          <li class="reviews term">Земельное право</li>
+          <li class="term rate budget">Общеобразовательное право</li>
         </ul>
         <ul class="nav">
-          <li><a href="#">Налоговое право</a></li>
-          <li><a href="#">Гражданское право</a></li>
-          <li><a href="#">Защита прав потребителя</a></li>
-          <li><a href="#">Военное право</a></li>
+          <li class="city rate reviews">Налоговое право</li>
+          <li class="date rate">Гражданское право</li>
+          <li class="term budget">Защита прав потребителя</li>
+          <li class="budget date">Военное право</li>
         </ul>
     </div>
-    <div class="block"></div>
-  </div>
 
-  <div id="list">
-    <!-- <article class="list-item">
-        <div>
-          <h3>titile</h3>
-          <p>desc</p>
-          <div class="list-item-info">
-            <span class="rate">
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-              <i class="icon-star-full"></i>
-            </span>
-            <span class="done">Работ выполнено:<span>111</span></span>
-            <span class="reviews">Отзывов:<span>111</span></span>
-          </div>
+    <div class="more">
+
+      <div id="budget">
+        <label>Бюджет:</label>
+        <div class="input-group">
+          <input type="text" name="budgetOt" placeholder="от">
+          <input type="text" name="budgetDo" placeholder="до">
         </div>
-        <button>Открыть</button>
-      </article> -->
+      </div>
 
+      <div id="term">
+        <label>Срок:</label>
+        <div class="input-group">
+            <input type="text" name="termOt" placeholder="от">
+            <input type="text" name="termDo" placeholder="до">
+        </div>
+      </div>
 
-      <script>
-          const list = document.getElementById('list');
-          
-          for (let index = 0; index < 5; index++) {
-            let listItem = document.createElement('article'); 
-            let title = 'title';
-            let bot = 'bot';
-            let description = 'desc';
-            let done = 111;
-            let reviews = 111;
-            let rate = '<i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i>';
-            listItem.href = '/';
-            listItem.className = 'list-item'; 
+      <div id="date">
+          <label>Дата:</label>
+        <div class="input-group">
+            <input type="text" name="dateOt" placeholder="от">
+            <input type="text" name="datetDo" placeholder="до">
+        </div>
+      </div>
 
-            listItem.innerHTML = '<div><h3>' + title + '</h3><p>' + description + '</p><div class="list-item-info"><span class="rate">' + rate + '</span><span class="done">Работ выполнено:<span>' + done + '</span></span><span class="reviews">Отзывов:<span>' + reviews + '</span></span></div></div><button>Открыть</button>';
-      
-            list.appendChild(listItem);   
-          }
-      
-          </script>
+      <div id="rate">
+        <label for="rate">Рейтинг:</label>
+        <input type="number" name="rate">
+      </div>
+
+      <div id="reviews">
+        <label for="reviews">Отзывы:</label>
+        <input type="number" name="reviews">
+      </div>
+
+      <div id="city">
+        <label for="city">Город:</label>
+        <input type="text" name="city">
+      </div>
+
+    </div>
   </div>
 
+  <div id="list"><span>Loading...</span></div>
 
-  
   <ul id="pagination">
     <li id="prev">&#171;</li>
     <li id="page1" class="active">1</li>
@@ -161,6 +159,8 @@
 
     <h5 class="copyriting">Ulance.com.ua<span>&nbsp;&#169;&nbsp;</span>2014</h5></div>
   </footer>
+  <script src="index.js"></script>
+  <script src="dropdown.js"></script>
 </body>
 
 </html>
