@@ -1,0 +1,95 @@
+footer {
+  @include flex(column, center, center);
+  background: white;
+  width: 100%;
+
+  .footer-content {
+    @include flex(row, space-between);
+
+    max-width: $max-width;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $gray-border;
+
+    ul {
+      margin-top: 60px;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 23px;
+      }
+      a {
+        font-size: 16px;
+        color: $gray-text;
+
+        &:hover {
+          color: $hover-color;
+          
+          h5 {
+            color: $hover-color;
+          }
+        }
+      }
+
+      h5 {
+        font-size: 16px;
+        color: #656d78;
+      }
+    }
+  }
+
+  .social-links {
+    align-self: center;
+    @include flex(column, center, center);
+
+    span {
+      @include flex(row, space-between);
+
+      a {
+        height: 35px;
+        width: 35px;
+        border-radius: 50px;
+        margin: 20px 0px 0px 30px;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .copyriting {
+    max-width: $max-width;
+    width: 100%;
+    margin: 30px 0 30px 0;
+    font-size: 16px;
+  }
+
+  .list-group {
+    width: auto;
+  }
+}
+
+#twitter {
+  background: url(../sprite.png) no-repeat -4px -6px;
+}
+
+#facebook {
+  background: url(../sprite.png) no-repeat -71px -6px;
+}
+
+#google {
+  background: url(../sprite.png) no-repeat -138px -6px;
+}
+
+#linkedin {
+  background: url(../sprite.png) no-repeat -3px -62px;
+}
+
+#vk {
+  background: url(../sprite.png) no-repeat -71px -61px;
+}
+
+#odnoklasniki {
+  background: url(../sprite.png) no-repeat -138px -61px;
+}

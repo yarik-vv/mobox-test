@@ -29,11 +29,11 @@
   },
   "browserslist": {
     "production": [
-      "last 3 version",
+      "last 5 version",
       "ie 11"
     ],
     "development": [
-      "last 1 version"
+      "last 5 version"
     ]
   }
 }

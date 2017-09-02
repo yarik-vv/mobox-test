@@ -1,0 +1,106 @@
+#list {
+  background: white;
+  margin-top: 28px;
+  width: 100%;
+  border: 1px solid $gray-border;
+
+  article:last-child {
+    border-bottom: none;
+  }
+}
+
+.list-item {
+  width: 100%;
+  border-bottom: 1px solid $gray-border;
+  padding: 0px 30px 5px 30px;
+  @include flex(row, space-between, center);
+
+  h3 {
+    color: #656d78;
+    margin: 35px 0 20px 0;
+  }
+
+  p {
+    color: $gray-text;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  button {
+    height: 35px;
+    background: $hover-color;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 0 10px 0 10px;
+    margin-left: 40px;
+
+    &:hover{
+      background: $primary-color;
+    }
+  }
+}
+
+.list-item-info {
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #aab2bd;
+
+  .rate {
+    color: $hover-color;
+  }
+
+  .done {
+    margin: 0 27px 0 15px;
+
+    span {
+      padding-left: 3px;
+      color: $hover-color;
+    }
+  }
+
+  .reviews span {
+    padding-left: 3px;
+    color: #a8d477;
+  }
+}
+
+#pagination {
+  @include flex(row, space-between, center);
+
+  align-self: center;
+  margin: 30px 0 30px 0;
+  border: 1px solid $gray-border;
+  border-radius: 3px;
+
+  li {
+    @include flex(row, center, center);
+
+    height: 43px;
+    width: 43px;
+    border: 0;
+    background: white;
+    color: $hover-color;
+    border-right: 1px solid $gray-border;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: $gray-border;
+      color: white;
+    }
+  }
+
+  .active {
+    background: $hover-color;
+    color: white;
+
+    &:hover {
+      background: $hover-color;
+    }
+  }
+}

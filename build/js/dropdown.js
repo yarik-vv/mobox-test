@@ -4,32 +4,35 @@ const moreBlock = document.querySelector('.dropdown .more');
 const dropdownBtn = document.querySelector('.icon-category');
 
 dropdownBtn.onclick = dropdown;
+
+//функция открытия окна
 function dropdown() {
   dropdownBlock.style.display = 'flex';
   dropdownBlock.addEventListener('click', category);
-
+  
+  //вешаем функцию скрытия окна
   dropdownBtn.onclick = function() {
     dropdownBlock.style.display = 'none';
     moreBlock.style.display = 'none';
     categoryBlock.style.maxWidth = 'none';
+
+    //возвращаем функцию открытия
     return (dropdownBtn.onclick = dropdown);
-    //console.log('vsmisle');
   };
 }
 
+//функция выбора категорий
 function category(event){
-  console.log(event.target.nodeName);
   if(event.target.nodeName === 'LI'){
     moreBlock.style.display = 'flex';
     categoryBlock.style.maxWidth = '725px';
 
-          //убираем прошлые инпуты все
-          for (let i = 0; i < moreBlock.childNodes.length; i++) {
-            if(i%2 !== 0){
-              console.log(moreBlock.childNodes[i]);
-              moreBlock.childNodes[i].style.display = 'none';
-            }
-          }
+    //убираем прошлые инпуты все
+    for (let i = 0; i < moreBlock.childNodes.length; i++) {
+      if(i%2 !== 0){
+        moreBlock.childNodes[i].style.display = 'none';
+      }
+    }
 
     function selectInput(inputName){
       //выводим новые инпуты
@@ -37,10 +40,9 @@ function category(event){
       input.style.display = 'flex';
     }
     
+    //перебираем и выводим инпуты соответственно категории
     let moreInputs = event.target.className.split(' ');
-    //console.log(moreInputs[0]);  
     for (let i = 0; i < moreInputs.length; i++) {
-      console.log(moreInputs[i]);
       selectInput(moreInputs[i]);
     }
   } 

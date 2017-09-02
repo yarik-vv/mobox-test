@@ -1,0 +1,109 @@
+.dropdown {
+  @include flex(row, space-between, stretch);
+
+  width: 100%;
+  margin-top: 28px;
+  display: none;
+}
+
+.kategory {
+  background: white;
+  position: relative;
+  @include flex(row, space-between);
+  padding: 28px;
+  //max-width: 725px;
+  width: 100%;
+
+  border: 1px solid $gray-border;
+
+  ul {
+    list-style: none;
+
+    li {
+      line-height: 2;
+      color: $gray-text;
+
+      &:hover {
+        cursor: pointer;
+        color: $hover-color;
+      }
+    }
+  }
+}
+
+.kategory:after {
+  width: 10px;
+  height: 10px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: 63%;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-left-color: $gray-border;
+  border-top-color: $gray-border;
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -ms-transform-origin: 50%;
+  transform-origin: 50%;
+}
+
+.more {
+  @include flex(column, center, center);
+
+  background: white;
+  max-width: 186px;
+  width: 100%;
+  border: 1px solid $gray-border;
+  display: none;
+
+  label {
+    @include flex(row, center, center);
+
+    font-size: 14px;
+    color: $gray-text;
+    margin: 7px 0 7px 0;
+  }
+
+  .input-group {
+    input {
+      width: 35px;
+      height: 31px;
+      border-radius: 3px;
+      box-shadow: none;
+      border: 1px solid $gray-border;
+      font-size: 14px;
+      text-align: center;
+
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  #rate,
+  #reviews,
+  #city {
+    @include flex(column, center, center);
+    display: none;
+
+    input {
+      max-width: 86px;
+      width: 100%;
+      height: 31px;
+      box-shadow: none;
+      border: 1px solid $gray-border;
+      border-radius: 3px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  
+  #budget,
+  #term,
+  #date {
+    @include flex(column, center, center);
+    display: none;
+  }
+}
