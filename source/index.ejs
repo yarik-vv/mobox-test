@@ -66,6 +66,51 @@
     <div class="block"></div>
   </div>
 
+  <div id="list">
+    <!-- <article class="list-item">
+        <div>
+          <h3>titile</h3>
+          <p>desc</p>
+          <div class="list-item-info">
+            <span class="rate">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+            </span>
+            <span class="done">Работ выполнено:<span>111</span></span>
+            <span class="reviews">Отзывов:<span>111</span></span>
+          </div>
+        </div>
+        <button>Открыть</button>
+      </article> -->
+
+
+      <script>
+          const list = document.getElementById('list');
+          
+          for (let index = 0; index < 5; index++) {
+            let listItem = document.createElement('article'); 
+            let title = 'title';
+            let bot = 'bot';
+            let description = 'desc';
+            let done = 111;
+            let reviews = 111;
+            let rate = '<i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i>';
+            listItem.href = '/';
+            listItem.className = 'list-item'; 
+
+            listItem.innerHTML = '<div><h3>' + title + '</h3><p>' + description + '</p><div class="list-item-info"><span class="rate">' + rate + '</span><span class="done">Работ выполнено:<span>' + done + '</span></span><span class="reviews">Отзывов:<span>' + reviews + '</span></span></div></div><button>Открыть</button>';
+      
+            list.appendChild(listItem);   
+          }
+      
+          </script>
+  </div>
+
+
+  <div id="pagination"></div>
   </main>
 
   <footer>
