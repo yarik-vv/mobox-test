@@ -1,5 +1,5 @@
 @font-face {
-  src: url(/icons/icons.woff2) format("woff2"), url(/icons/icons.woff) format("woff"), url(/icons/icons.ttf) format("ttf"), url(/icons/icons.eot) format("eot");
+  src: url( icons/icons.woff2) format("woff2"), url( icons/icons.woff) format("woff"), url( icons/icons.ttf) format("ttf"), url( icons/icons.eot) format("eot");
   font-family: "icons";
   font-style: normal;
   font-weight: normal; }
@@ -622,22 +622,22 @@ footer {
     font-size: 16px; }
 
 #twitter {
-  background: url(/sprite.png) no-repeat -4px -6px; }
+  background: url( sprite.png) no-repeat -4px -6px; }
 
 #facebook {
-  background: url(/sprite.png) no-repeat -71px -6px; }
+  background: url( sprite.png) no-repeat -71px -6px; }
 
 #google {
-  background: url(/sprite.png) no-repeat -138px -6px; }
+  background: url( sprite.png) no-repeat -138px -6px; }
 
 #linkedin {
-  background: url(/sprite.png) no-repeat -3px -62px; }
+  background: url( sprite.png) no-repeat -3px -62px; }
 
 #vk {
-  background: url(/sprite.png) no-repeat -71px -61px; }
+  background: url( sprite.png) no-repeat -71px -61px; }
 
 #odnoklasniki {
-  background: url(/sprite.png) no-repeat -138px -61px; }
+  background: url( sprite.png) no-repeat -138px -61px; }
 
 @media (max-width: 980px) {
   .icon-help,
