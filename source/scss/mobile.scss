@@ -1,0 +1,64 @@
+@media (max-width: 980px) {
+  .icon-help,
+  header .menu a:nth-child(5),
+  .footer-content ul:nth-child(3){
+    display: none;
+  }
+  header .menu, main{
+    padding: 0 10px 0 10px;
+  }
+  .main-search, header .menu,
+  footer .footer-content{
+    justify-content: space-around;
+  }
+  .main-input{
+    justify-content: space-between;
+    max-width: none;
+
+    button{
+      padding: 0 5px 0 5px;
+      border-left: 1px solid $gray-border;
+    }
+    input{
+      max-width: none;
+      border: none;
+      width: 100%;
+    }
+  }
+  footer .copyriting{
+    margin: 5px 10px 5px 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: $gray-text;   
+  }
+}
+
+@media (max-width: 740px) {
+  .main-input button,
+  header .menu a:nth-child(4),
+  .footer-content ul:nth-child(2){
+    display: none;
+  }
+  footer .copyriting{
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .list-item button,
+  header .menu a:nth-child(3),
+  header .menu a:nth-child(2){
+      display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .input-menu,
+  .list-item-info .rate{
+      display: none;
+  }
+  .list-item-info .done{
+    margin-left: 0;
+  }
+}

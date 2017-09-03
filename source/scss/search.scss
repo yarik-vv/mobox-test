@@ -4,6 +4,7 @@
 }
 
 .main-input {
+  @include flex(row, center);
   background: white;
   position: relative;
   max-width: 725px;
