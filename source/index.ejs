@@ -20,9 +20,9 @@
       <a href="#">Юристы</a>
       <a href="#">Как это работает</a>
       <div class="input-menu">
-        <button class="icon-search"></button>
+        <button class="icon-search" id="searchMenu"></button>
         <button class="icon-open"></button>
-        <input type="text" placeholder="Поиск клиентов">
+        <input type="text" placeholder="Поиск клиентов" name="searchMenu">
       </div>
       <button class="icon-login"></button>
     </nav>
@@ -34,10 +34,10 @@
       <div class="main-search">
         <div class="main-input">
           <span class="icon-search"></span>
-          <input type="text" placeholder="Текст">
+          <input type="text" name="search" placeholder="Текст">
           <button class="icon-category">&nbsp;&nbsp;Категория</button>
         </div>
-        <button class="main-search-btn icon-search"></button>
+        <button class="main-search-btn icon-search" id="search"></button>
         <button class="main-search-btn icon-help"></button>
       </div>
 
@@ -85,7 +85,7 @@
             <label>Дата:</label>
             <div class="input-group">
               <input type="text" name="dateOt" placeholder="от">
-              <input type="text" name="datetDo" placeholder="до">
+              <input type="text" name="dateDo" placeholder="до">
             </div>
           </div>
 
@@ -107,7 +107,7 @@
         </div>
       </div>
 
-      <div id="list"><span>Loading...</span></div>
+      <div id="list"><h3 class="error">Loading...</h3></div>
 
       <ul id="pagination">
         <li id="prev">&#171;</li>
@@ -175,6 +175,7 @@
   <script src="js/index.js"></script>
   <script src="js/dropdown.js"></script>
   <script src="js/pagination.js"></script>
+  <script src="js/search.js"></script>
 </body>
 
 </html>

@@ -38,9 +38,20 @@ function AJAXrequest(url, method) {
 
 //функция загрузки постов в блок
 function pushPosts(data, start) {
+  //если по какой-то причине нету, то выдаем ошибку
+  if(data.length === 0){
+    list.innerHTML = '<h3 class="error">Ошибка при загрузке содержимого...</h3>';
+    return;
+  }
+
   list.innerHTML = '';
 
   for (let i = start; i < start + 5; i++) {
+    //выходим из цыкла когда обьекты закончились
+    if(data[i] === undefined){
+      return;
+    }
+
     let listItem = document.createElement('article');
     listItem.className = 'list-item';
 
